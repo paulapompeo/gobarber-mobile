@@ -74,7 +74,10 @@ const CreateAppointment: React.FC = () => {
           data={providers}
           keyExtractor={provider => provider.id}
           renderItem={({ item: provider }) => (
-            <ProviderContainer selected={provider.id === selectedProvider}>
+            <ProviderContainer
+              onPress={() => handleSelectProvider(provider.id)}
+              selected={provider.id === selectedProvider}
+            >
               <ProviderAvatar source={{ uri: provider.avatar_url }} />
               <ProviderName selected={provider.id === selectedProvider}>
                 {provider.name}

@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { RectButton } from 'react-native-gesture-handler';
 import { Provider } from './index';
 
 interface ProviderContainerProps {
@@ -49,7 +50,7 @@ export const ProvidersList = styled(FlatList as new () => FlatList<Provider>)`
   padding: 32px 24px;
 `;
 
-export const ProviderContainer = styled.View<ProviderContainerProps>`
+export const ProviderContainer = styled(RectButton)<ProviderContainerProps>`
   background: ${props => (props.selected ? '#ff9000' : ' #3e3b47')};
   flex-direction: row;
   align-items: center;
