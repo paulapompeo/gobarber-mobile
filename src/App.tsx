@@ -12,6 +12,7 @@ import Routes from './routes';
 
 const App: React.FC = () => (
   <NavigationContainer>
+    {/* corrigir essa status bar */}
     <StatusBar barStyle="light-content" backgroundColor="#312E38" />
     <AppProvider>
       <View style={{ flex: 1, backgroundColor: '#312E38' }}>
