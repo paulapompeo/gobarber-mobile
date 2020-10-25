@@ -179,6 +179,8 @@ const CreateAppointment: React.FC = () => {
       {afternoonAvailability.map(({ hourFormatted }) => (
         <Title key={hourFormatted}>{hourFormatted}</Title>
       ))}
+
+      {/* precisa estilizar */}
     </Container>
   );
 };
